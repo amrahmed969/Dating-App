@@ -1,3 +1,6 @@
+import { ServerErrorComponent } from './erros/server-error/server-error.component';
+import { NotFoundComponent } from './erros/not-found/not-found.component';
+import { TestErrorsComponent } from './erros/test-errors/test-errors.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
@@ -21,7 +24,10 @@ const routes: Routes = [
     ]
   } ,
     
-  {path:'**' ,component: HomeComponent, pathMatch:'full'},  
+  {path:'error' ,component: TestErrorsComponent, },  
+  {path:'not-found' ,component: NotFoundComponent, },  
+  {path:'server-error' ,component: ServerErrorComponent, },  
+  {path:'**' ,component: NotFoundComponent, pathMatch:'full'},  
 
 ];
 
