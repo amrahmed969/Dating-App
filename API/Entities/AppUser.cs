@@ -27,7 +27,6 @@ namespace API.Entities
         // {
         //     return DateOfBirth.CalculateAge();
         // }
-
     }
 
 }
