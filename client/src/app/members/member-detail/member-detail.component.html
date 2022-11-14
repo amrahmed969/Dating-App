@@ -41,6 +41,10 @@
             <p>{{member.interests}}</p>
         </tab>
         <tab heading='Photos'>
+            <div class="row p-2 d-inline" *ngFor="let photo of member.photos">
+                <img class="col-3 p-2 " src="{{photo.url}}" alt="">
+            </div>
+           
             <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery" style="display: inline-block; margin-bottom: 20px; "></ngx-gallery>
         </tab>
         <tab heading='messages'>

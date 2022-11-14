@@ -38,8 +38,8 @@ export class MemberDetailComponent implements OnInit {
         medium: photo?.url,
         big: photo?.url
       })
-      return imageUrl;
     }
+    return imageUrl;
   }
   loadMember(){
     this.memberService.getMember(this.route.snapshot.paramMap.get('username')).subscribe(member=>{
